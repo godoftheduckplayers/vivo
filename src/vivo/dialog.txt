@@ -1,16 +1,11 @@
-userInput:me gustaria los planos de internet cual son los valores del plano Vivo Combo?
-auraResponse:Vivo ofrece una variedad de planes combo que incluyen internet, móvil y otros servicios para un paquete completo. Aquí están algunos de los planes actuales de Vivo Combo:
+userInput:me gustaria tener el plano vivo easy, cual el valor deste plano?
+auraResponse:Vivo Easy es un plan ofrecido por Vivo que está diseñado para proporcionar flexibilidad y conveniencia a los usuarios móviles. Actualmente, el plan Vivo Easy permite a los clientes utilizar una aplicación móvil para comprar y gestionar sus datos, llamadas y otros servicios sin ningún contrato. Los usuarios pueden personalizar sus planes según sus necesidades comprando paquetes de datos, minutos para llamadas e incluso acceso a aplicaciones específicas.
 
-1. **Vivo Combo Família**:
-   - **Tipo**: Combo (Internet + Móvil)
-   - **Descripción**: Este plan está diseñado para familias e incluye internet de banda ancha con una generosa cantidad de datos, junto con múltiples líneas móviles que comparten llamadas y mensajes de texto ilimitados en todo Brasil. A menudo incluye beneficios adicionales como acceso gratuito a ciertas aplicaciones o servicios.
+Para el plan Vivo Easy, los costos pueden variar según los paquetes que seleccione dentro de la aplicación. Normalmente, Vivo Easy ofrece una estructura de precios donde:
+- Los paquetes de datos están disponibles a partir de R$7,99 por 1GB.
+- Se pueden comprar llamadas ilimitadas dentro de Brasil (a cualquier operador).
+- Algunas aplicaciones tienen sus propios costos para acceso ilimitado por un cierto período.
 
-2. **Vivo Total**:
-   - **Tipo**: Combo (Internet + Móvil + TV)
-   - **Descripción**: Vivo Total reúne servicios de internet de banda ancha para el hogar, líneas móviles y televisión. Es adecuado para usuarios que desean una experiencia digital completa, combinando internet de alta velocidad, conectividad móvil y una variedad de canales de televisión, incluidos HD.
+La característica clave de Vivo Easy es su modelo de "pago por uso", donde los usuarios solo son cobrados por los servicios que eligen comprar a través de la aplicación. No hay tarifas mensuales fijas a menos que seleccione servicios específicos, y sus datos no utilizados no expiran al final del mes, lo que puede ser conveniente para muchos usuarios.
 
-3. **Vivo Smart Casa**:
-   - **Tipo**: Combo (Internet + Casa Inteligente)
-   - **Descripción**: Este plan combina internet de banda ancha con soluciones para el hogar inteligente, como automatización del hogar y sistemas de seguridad. Destaca por integrar tecnología en el entorno del hogar para mayor comodidad y seguridad.
-
-Los precios de estos planes pueden variar según la ubicación, las promociones disponibles y las configuraciones específicas elegidas por el cliente (por ejemplo, velocidad de internet, número de líneas móviles y elección de canales de televisión). Para obtener detalles precisos sobre los precios, los clientes potenciales deben contactar directamente a Vivo o visitar su sitio web oficial para determinar el mejor plan que se ajuste a sus necesidades y presupuesto.
+Para obtener los precios más recientes y específicos del plan Vivo Easy, se recomienda descargar la aplicación Vivo Easy y verificar las ofertas actuales, ya que los precios y paquetes pueden actualizarse periódicamente.

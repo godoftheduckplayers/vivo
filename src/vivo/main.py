@@ -4,7 +4,7 @@ from crewai.flow.flow import Flow, listen, start, router, or_
 from pydantic import BaseModel
 
 from src.vivo.crews.aura.aura import Aura
-from src.vivo.crews.information.plans import Plans
+from src.vivo.crews.information.information import Plans
 from src.vivo.crews.multilanguage.multilanguage import Multilanguage
 
 EXIT_MESSAGES = ['exit', 'quit']
@@ -45,7 +45,7 @@ class AuraFlow(Flow[AuraState]):
         )
         self.state.auraResponse = result.raw
 
-    @listen(or_(redirect_service, process_plan))
+    @listen(or_(process_plan))
     def save_dialog(self):
         result = (
             Multilanguage()
@@ -68,11 +68,6 @@ def chat_mode():
             print(GOODBYE_MESSAGE)
             break
         return user_input
-
-
-def kickoff():
-    aura_flow = AuraFlow()
-    aura_flow.kickoff()
 
 
 def plot():

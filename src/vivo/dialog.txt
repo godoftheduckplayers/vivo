@@ -1,19 +1,32 @@
 userInput:quais os planos de internet da vivo?
-auraResponse:Aqui está a lista atual dos planos disponíveis da Vivo:
+auraResponse:A Vivo oferece uma variedade de planos de internet para atender a diferentes necessidades. Aqui estão alguns dos planos de internet disponíveis atualmente:
 
-1. **Planos de Internet Vivo Fibra (Internet Residencial):**
-   - **Vivo Fibra 200 Megas**: Este é um plano de internet de fibra que oferece conectividade em alta velocidade, ideal para streaming, jogos e vários usuários em uma residência.
-   - **Vivo Fibra 300 Megas**: Oferece velocidades de download e upload mais rápidas, adequadas para residências maiores com alta demanda de internet.
-   - **Vivo Fibra 600 Megas**: Melhor para uso intenso de internet com vários dispositivos conectados simultaneamente, oferecendo experiências de streaming e jogos sem interrupções.
-   - **Vivo Fibra 1 Giga**: Internet ultraveloz para atividades extensas online e múltiplos usuários, proporcionando uma experiência excepcional de navegação e streaming.
+1. **Vivo Fibra 200 Mega**:
+   - **Tipo**: Internet
+   - **Descrição**: Proporciona velocidade de download de 200 Mbps, ideal para streaming em múltiplos dispositivos, jogos online e downloads rápidos. Frequentemente, acompanha benefícios adicionais como acesso ao Vivo Play e software antivírus para segurança aprimorada.
 
-2. **Planos Móveis Vivo:**
-   - **Vivo Selfie**: Inclui um pacote de dados, chamadas e SMS, com benefícios adicionais para redes sociais, atendendo a usuários ativos de smartphones.
-   - **Vivo Easy Prime**: Oferece um plano móvel personalizável que permite aos usuários gerenciarem dados e chamadas de acordo com suas necessidades. Inclui aplicativos bônus com dados sem custo.
-   - **Vivo Pós**: Plano pós-pago com diversos limites de dados, chamadas ilimitadas e SMS, ideal para quem usa o telefone extensivamente para trabalho e uso pessoal.
+2. **Vivo Fibra 300 Mega**:
+   - **Tipo**: Internet
+   - **Descrição**: Oferece 300 Mbps de velocidade de internet. Este plano suporta uso intenso de internet, adequado para famílias maiores ou acomodações compartilhadas, permitindo streaming UHD contínuo e downloads/uploads rápidos.
 
-3. **Planos Combo Vivo:**
-   - **Combo Full**: Combina Internet Fibra com Vivo TV e uma linha móvel, oferecendo um pacote abrangente para famílias que desejam conectividade e entretenimento em um único pacote.
-   - **Combo Internet + Telefone**: Junta internet residencial com uma linha fixa de telefone, indicado para usuários que procuram um pacote tradicional de conectividade residencial.
+3. **Vivo Fibra 600 Mega**:
+   - **Tipo**: Internet
+   - **Descrição**: Com uma conexão de 600 Mbps, é adequado para casas com dispositivos inteligentes, desempenho excelente para videoconferências, trabalho remoto e jogos sem interrupções. Vem com vantagens como opções de amplificador de Wi-Fi.
 
-Esses planos estão sujeitos a disponibilidade e podem variar por região. É aconselhável verificar diretamente com a Vivo as opções mais precisas e personalizadas com base na sua localização e necessidades de uso.
+4. **Vivo Fibra 1 Giga**:
+   - **Tipo**: Internet
+   - **Descrição**: O plano de ultra-alta velocidade com 1 Gbps, perfeito para entusiastas de tecnologia, garantindo conectividade superior para várias atividades de alto volume, incluindo streaming em 4K, suporte multiusuário estendido e rede doméstica inteligente robusta.
+
+5. **Planos Combo Vivo (Vivo Fibra + Voz Fixa)**:
+   - **Tipo**: Combo
+   - **Descrição**: Estes pacotes combinam internet de alta velocidade (variando de 200 Mbps a 600 Mbps) com um serviço de telefone fixo que inclui chamadas locais e nacionais ilimitadas para qualquer telefone fixo, proporcionando uma solução completa para necessidades de conectividade doméstica.
+
+6. **Planos Vivo Easy**:
+   - **Tipo**: Móvel + Internet
+   - **Descrição**: São planos modulares que permitem ao usuário flexibilidade para comprar apenas o que precisa, combinando dados de internet móvel e serviços de voz. Eles oferecem dados de internet adicionais que podem ser usados para fins domésticos, se o usuário optar pelo tethering.
+
+7. **Planos Vivo Selfie com Apps**:
+   - **Tipo**: Móvel + Internet
+   - **Descrição**: Focados em usuários de aplicativos, esses planos oferecem dados de internet e serviços específicos dedicados a aplicativos particulares (por exemplo, WhatsApp, Instagram) juntamente com o uso geral de dados, muitas vezes combinados com opções de banda larga fixa.
+
+Esses planos podem variar em disponibilidade e detalhes dependendo da região e requisitos específicos do usuário. É sempre benéfico contatar a Vivo diretamente ou visitar seu site para opções de planos personalizadas e as últimas promoções ou adições às suas ofertas de serviços.

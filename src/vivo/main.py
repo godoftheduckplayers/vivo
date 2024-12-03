@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from src.vivo.crews.aura.aura import Aura
 from src.vivo.crews.multilanguage.multilanguage import Multilanguage
-from src.vivo.crews.plans.plans import Plans
+from src.vivo.crews.information.plans import Plans
 
 EXIT_MESSAGES = ['exit', 'quit']
 GOODBYE_MESSAGE = "Thank you so much for contacting us! 😊 It was a pleasure helping you. If you need anything else, just reach out. I'll always be here for anything you need. 💙 See you soon!"
@@ -32,11 +32,11 @@ class AuraFlow(Flow[AuraState]):
 
     @router(handle_user_input)
     def redirect_service(self):
-        if self.state.topic in ["plans"]:
-            return "plans"
+        if self.state.topic in ["information"]:
+            return "information"
         return self.state.topic
 
-    @listen("plans")
+    @listen("information")
     def process_plan(self):
         result = (
             Plans()

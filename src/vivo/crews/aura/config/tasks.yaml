@@ -1,6 +1,6 @@
 classification_task:
   description: >
-    Classify the customer's request into categories such as 'internet', 'second_copy', 'plans', or 'other'.
+    Classify the customer's request into categories such as 'information', 'contracting', 'problems', or 'cancellation'.
   expected_output: >
-    ["internet", "second_copy", "plans", "other"]
+    ["information", "contracting", "problems", 'cancellation']
   agent: classification_agent

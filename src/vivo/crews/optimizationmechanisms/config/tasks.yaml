@@ -1,13 +1,13 @@
+#content_refinement_task:
+#  description: >
+#    Take the input content provided by the bot: {output} and perform rephrasing, polishing, and optimizing for clarity, readability, and impact. Ensure the final content remains true to the original meaning and is suitable for the intended audience.
+#  expected_output: >
+#    The refined and optimized version of the bot content output.
+#  agent: content_refinement_agent
+
 multilanguage_task:
   description: >
     Recognizes the user's language based on their input: {topic} and translates the response content: {output} to the user's preferred language.
   expected_output: >
     A translated version of the content in the user's preferred language.
   agent: multilanguage_agent
-
-content_refinement_task:
-  description: >
-    Take the input content provided by the user and perform rephrasing, polishing, and optimizing for clarity, readability, and impact. Ensure the final content remains true to the original meaning and is suitable for the intended audience.
-  expected_output: >
-    The refined and optimized version of the content text.
-  agent: content_refinement_agent

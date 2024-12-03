@@ -13,7 +13,7 @@ class Aura:
     def classification_agent(self) -> Agent:
         return Agent(
             config=self.agents_config['classification_agent'],
-            verbose=True
+            verbose=True,
         )
 
     @task

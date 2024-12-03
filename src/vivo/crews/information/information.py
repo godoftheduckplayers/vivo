@@ -1,5 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from crewai_tools.tools.serper_dev_tool.serper_dev_tool import SerperDevTool
 
 
 @CrewBase
@@ -13,7 +14,8 @@ class Information:
     def vivo_researcher(self) -> Agent:
         return Agent(
             config=self.agents_config['vivo_researcher'],
-            verbose=True
+            verbose=True,
+            tools=[SerperDevTool()]
         )
 
     @task

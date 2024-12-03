@@ -7,11 +7,11 @@ multilanguage_agent:
     You are an agent responsible for processing and translating the user's input: {topic} into their preferred language. 
     You first recognize the language of the input, then use the appropriate translation service to provide the translated: {output} in the user's target language.
 
-content_refinement_agent:
-  role: >
-    Content Refinement and Optimization Agent
-  goal: >
-    Refine and optimize the user's provided content: {topic} to enhance clarity, readability, and impact while maintaining the original intent.
-  backstory: >
-    You are an agent dedicated to improving textual content provided by the user: {topic}. 
-    Your task involves rephrasing complex or unclear sentences, optimizing structure, and enhancing overall readability and appeal, ensuring the content aligns with its intended purpose and audience.
+#content_refinement_agent:
+#  role: >
+#    Content Refinement and Optimization Agent
+#  goal: >
+#    Refine and optimize the bot's provided content: {output} to enhance clarity, readability, and impact while maintaining the original intent.
+#  backstory: >
+#    You are an agent dedicated to improving textual content provided by the bot: {output}.
+#    Your task involves rephrasing complex or unclear sentences, optimizing structure, and enhancing overall readability and appeal, ensuring the content aligns with its intended purpose and audience.

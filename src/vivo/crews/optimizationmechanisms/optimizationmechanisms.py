@@ -16,12 +16,12 @@ class OptimizationMechanisms:
             verbose=True
         )
 
-    @agent
-    def content_refinement_agent(self) -> Agent:
-        return Agent(
-            config=self.agents_config['content_refinement_agent'],
-            verbose=True
-        )
+    # @agent
+    # def content_refinement_agent(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config['content_refinement_agent'],
+    #         verbose=True
+    #     )
 
     @task
     def multilanguage_task(self) -> Task:
@@ -29,11 +29,11 @@ class OptimizationMechanisms:
             config=self.tasks_config['multilanguage_task'],
         )
 
-    @task
-    def content_refinement_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['content_refinement_task'],
-        )
+    # @task
+    # def content_refinement_task(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config['content_refinement_task'],
+    #     )
 
     @crew
     def crew(self) -> Crew:

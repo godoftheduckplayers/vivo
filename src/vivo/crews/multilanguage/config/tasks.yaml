@@ -1,6 +1,0 @@
-aura_translation_content_task:
-  description: >
-    Recognizes the user's language based on their input: {topic} and translates the response content: {output} to the user's preferred language.
-  expected_output: >
-    A translated version of the content in the user's preferred language.
-  agent: multilanguage_agent

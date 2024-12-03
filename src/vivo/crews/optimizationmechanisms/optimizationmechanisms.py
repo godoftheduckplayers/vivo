@@ -3,8 +3,8 @@ from crewai.project import CrewBase, agent, crew, task
 
 
 @CrewBase
-class Multilanguage:
-    """Multilanguage crew"""
+class OptimizationMechanisms:
+    """OptimizationMechanisms crew"""
 
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
@@ -16,10 +16,23 @@ class Multilanguage:
             verbose=True
         )
 
+    @agent
+    def content_refinement_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['content_refinement_agent'],
+            verbose=True
+        )
+
     @task
-    def aura_translation_content_task(self) -> Task:
+    def multilanguage_task(self) -> Task:
         return Task(
-            config=self.tasks_config['aura_translation_content_task'],
+            config=self.tasks_config['multilanguage_task'],
+        )
+
+    @task
+    def content_refinement_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['content_refinement_task'],
         )
 
     @crew

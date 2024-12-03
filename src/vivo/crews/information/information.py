@@ -3,8 +3,8 @@ from crewai.project import CrewBase, agent, crew, task
 
 
 @CrewBase
-class Plans:
-    """Plans crew"""
+class Information:
+    """Information crew"""
 
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'

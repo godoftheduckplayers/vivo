@@ -23,10 +23,6 @@ class AuraFlow(Flow[AuraState]):
 
     @start()
     def handle_user_input(self):
-        self.state.userInput = chat_mode()
-
-    @listen(handle_user_input)
-    def start_service(self):
         result = (
             Aura()
             .crew()
@@ -34,7 +30,7 @@ class AuraFlow(Flow[AuraState]):
         )
         self.state.topic = result.raw
 
-    @router(start_service)
+    @router(handle_user_input)
     def redirect_service(self):
         if self.state.topic in ["plans"]:
             return "plans"
@@ -61,7 +57,6 @@ class AuraFlow(Flow[AuraState]):
         with open("dialog.txt", "w") as f:
             f.write("userInput:" + self.state.userInput + "\n")
             f.write("auraResponse:" + self.state.auraResponse + "\n")
-        kickoff()
 
 
 def chat_mode():
@@ -86,4 +81,16 @@ def plot():
 
 
 if __name__ == "__main__":
-    kickoff()
+    aura_flow = AuraFlow()
+    print(WELCOME_MESSAGE)
+    print(EXIT_PROMPT)
+    while True:
+        user_input = input("User input: ").strip()
+        if user_input.lower() in EXIT_MESSAGES:
+            print(GOODBYE_MESSAGE)
+            break
+        aura_flow.kickoff(inputs={
+            "userInput": user_input,
+            "auraResponse": "",
+            "topic": ""
+        })

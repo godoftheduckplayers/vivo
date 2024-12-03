@@ -1,6 +1,6 @@
 language_recognition_translation_task:
   description: >
-    Recognizes the user's language based on their input and translates the content to the user's preferred language.
+    Recognizes the user's language based on their input: {topic} and translates the {output} to the user's preferred language.
   expected_output: >
     A translated version of the content in the user's preferred language.
   agent: translation_agent

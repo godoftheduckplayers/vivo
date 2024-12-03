@@ -1,0 +1,11 @@
+classification_task:
+  description: >
+    Classify the customer's request into categories such as 'internet', 'second_copy', 'plans', or 'other'.
+  expected_output: >
+    ["internet", "second_copy", "plans", "other"]
+
+language_recognition_translation_task:
+  description: >
+    Recognizes the user's language based on their input and translates the content to the user's preferred language.
+  expected_output: >
+    A translated version of the content in the user's preferred language.

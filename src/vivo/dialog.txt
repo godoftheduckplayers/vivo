@@ -1,0 +1,16 @@
+userInput:quais sao os planos da vivo?
+auraResponse:Here are the current plans offered by Vivo, translated to Portuguese:
+
+1. **Planos Móveis**:
+   - **Vivo Controle**: Um plano móvel que oferece um equilíbrio entre os recursos pré-pagos e pós-pagos. Geralmente inclui chamadas ilimitadas, uma quantidade fixa de dados e acesso a aplicativos selecionados sem consumir os dados.
+   - **Vivo Pós**: Estes são planos móveis pós-pagos que oferecem uma maior franquia de dados, chamadas ilimitadas e frequentemente opções de roaming internacional. Os planos variam, oferecendo diferentes níveis de dados e serviços adicionais como acesso a serviços de streaming de música ou vídeo.
+   
+2. **Planos de Internet**:
+   - **Vivo Fibra**: Plano de internet de alta velocidade de fibra óptica disponível em várias velocidades, de 200 Mbps a 600 Mbps ou mais, dependendo da região. Inclui uso ilimitado de dados com opções de empacotamento com serviços de TV.
+   - **Vivo Internet 4G**: Solução de internet sem fio que oferece conectividade 4G para residências ou empresas, conveniente em áreas sem acesso a cabos de fibra óptica.
+
+3. **Planos Combo**:
+   - **Vivo Tudo Em Um**: Combina internet, telefone fixo e serviços de TV em um pacote, oferecendo economias significativas em comparação com a compra de cada serviço separadamente. Normalmente inclui internet de alta velocidade (Vivo Fibra), um número fixo de canais de TV e chamadas ilimitadas de linha fixa.
+   - **Vivo Easy**: Uma opção de assinatura móvel flexível com a capacidade de comprar dados e minutos conforme necessário, atraente para usuários que precisam de quantidades variáveis de dados e tempo de chamada.
+
+Esses planos estão sujeitos à disponibilidade com base na localização do cliente e ofertas promocionais específicas que possam estar atualmente disponíveis. É aconselhável verificar o site oficial da Vivo ou entrar em contato com o serviço de atendimento ao cliente para obter as informações mais personalizadas e atualizadas.

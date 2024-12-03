@@ -1,0 +1,6 @@
+vivo_research_task:
+  description: >
+    Conduct a research to gather up-to-date information about Vivo's service, for exemple, internet, mobile, combo plans and etc, based on the user's input: {topic}.
+  expected_output: >
+    A list containing information about the available service, including name, type (internet, mobile, combo), and a brief description.
+  agent: vivo_researcher

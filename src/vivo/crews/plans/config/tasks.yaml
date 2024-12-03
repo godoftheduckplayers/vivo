@@ -1,6 +1,0 @@
-vivo_plan_research_task:
-  description: >
-    Conduct a research to gather up-to-date information about Vivo's plans, including internet, mobile, and combo plans, based on the user's {topic}.
-  expected_output: >
-    A list containing information about the available plans, including plan name, type (internet, mobile, combo), and a brief description.
-  agent: vivo_plan_researcher

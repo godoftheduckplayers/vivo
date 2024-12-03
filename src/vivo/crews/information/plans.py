@@ -10,16 +10,16 @@ class Plans:
     tasks_config = 'config/tasks.yaml'
 
     @agent
-    def vivo_plan_researcher(self) -> Agent:
+    def vivo_researcher(self) -> Agent:
         return Agent(
-            config=self.agents_config['vivo_plan_researcher'],
+            config=self.agents_config['vivo_researcher'],
             verbose=True
         )
 
     @task
-    def vivo_plan_research_task(self) -> Task:
+    def vivo_research_task(self) -> Task:
         return Task(
-            config=self.tasks_config['vivo_plan_research_task'],
+            config=self.tasks_config['vivo_research_task'],
         )
 
     @crew

@@ -17,9 +17,9 @@ class Multilanguage:
         )
 
     @task
-    def aura_translation_content(self) -> Task:
+    def aura_translation_content_task(self) -> Task:
         return Task(
-            config=self.tasks_config['aura_translation_content'],
+            config=self.tasks_config['aura_translation_content_task'],
         )
 
     @crew

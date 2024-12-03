@@ -10,16 +10,16 @@ class Multilanguage:
     tasks_config = 'config/tasks.yaml'
 
     @agent
-    def translation_agent(self) -> Agent:
+    def multilanguage_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['translation_agent'],
+            config=self.agents_config['multilanguage_agent'],
             verbose=True
         )
 
     @task
-    def language_recognition_translation_task(self) -> Task:
+    def aura_translation_content(self) -> Task:
         return Task(
-            config=self.tasks_config['language_recognition_translation_task'],
+            config=self.tasks_config['aura_translation_content'],
         )
 
     @crew

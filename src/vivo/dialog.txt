@@ -1,25 +1,16 @@
-userInput:quais serviços a vivo oferece?
-auraResponse:A Vivo oferece uma variedade de serviços no setor de telecomunicações, atendendo às diversas necessidades dos clientes no Brasil. Aqui está uma lista dos principais serviços oferecidos pela Vivo:
+userInput:me gustaria los planos de internet cual son los valores del plano Vivo Combo?
+auraResponse:Vivo ofrece una variedad de planes combo que incluyen internet, móvil y otros servicios para un paquete completo. Aquí están algunos de los planes actuales de Vivo Combo:
 
-1. **Planos Móveis:**
-   - **Vivo Pré-Pago:** Planos móveis flexíveis onde os usuários pagam pelos serviços antecipadamente. Inclui opções para diversos pacotes de dados, chamadas de voz e mensagens de texto.
-   - **Vivo Pós-Pago:** Planos móveis mensais com cobrança ao final do mês. Esses planos geralmente incluem pacotes de dados mais extensos, chamadas e mensagens ilimitadas, e benefícios adicionais como roaming internacional.
-   - **Vivo Controle:** Um modelo híbrido que oferece os benefícios dos planos pós-pagos, mas com cobranças mensais fixas, prevenindo gastos além dos limites pré-definidos.
+1. **Vivo Combo Família**:
+   - **Tipo**: Combo (Internet + Móvil)
+   - **Descripción**: Este plan está diseñado para familias e incluye internet de banda ancha con una generosa cantidad de datos, junto con múltiples líneas móviles que comparten llamadas y mensajes de texto ilimitados en todo Brasil. A menudo incluye beneficios adicionales como acceso gratuito a ciertas aplicaciones o servicios.
 
-2. **Serviços de Internet:**
-   - **Vivo Fibra:** Serviço de internet banda larga de alta velocidade por fibra óptica, proporcionando conectividade rápida e confiável para residências e empresas.
-   - **Vivo Internet Móvel:** Planos de dados para dispositivos móveis, tablets e modems, adequados para usuários em movimento.
+2. **Vivo Total**:
+   - **Tipo**: Combo (Internet + Móvil + TV)
+   - **Descripción**: Vivo Total reúne servicios de internet de banda ancha para el hogar, líneas móviles y televisión. Es adecuado para usuarios que desean una experiencia digital completa, combinando internet de alta velocidad, conectividad móvil y una variedad de canales de televisión, incluidos HD.
 
-3. **Serviços de TV:**
-   - **Vivo TV:** Oferece uma variedade de canais, incluindo entretenimento, esportes, filmes e documentários. Estão disponíveis opções para canais HD e conteúdo sob demanda.
+3. **Vivo Smart Casa**:
+   - **Tipo**: Combo (Internet + Casa Inteligente)
+   - **Descripción**: Este plan combina internet de banda ancha con soluciones para el hogar inteligente, como automatización del hogar y sistemas de seguridad. Destaca por integrar tecnología en el entorno del hogar para mayor comodidad y seguridad.
 
-4. **Planos Combo:**
-   - **Vivo Combo:** Pacotes combinados que englobam serviços de móvel, internet e TV, oferecendo economia de custos e conveniência com uma única conta.
-
-5. **Telefonia Fixa:**
-   - **Vivo Fixo:** Serviços tradicionais de telefonia fixa com opções para chamadas nacionais e internacionais, muitas vezes combinadas com outros serviços como banda larga ou TV.
-
-6. **Soluções Corporativas:**
-   - Oferece soluções de comunicação e conectividade personalizadas para empresas, incluindo telefonia móvel e fixa, banda larga e serviços de TI.
-
-Esses serviços ilustram o compromisso da Vivo em fornecer soluções de telecomunicações abrangentes para atender às variadas necessidades de clientes residenciais e empresariais.
+Los precios de estos planes pueden variar según la ubicación, las promociones disponibles y las configuraciones específicas elegidas por el cliente (por ejemplo, velocidad de internet, número de líneas móviles y elección de canales de televisión). Para obtener detalles precisos sobre los precios, los clientes potenciales deben contactar directamente a Vivo o visitar su sitio web oficial para determinar el mejor plan que se ajuste a sus necesidades y presupuesto.

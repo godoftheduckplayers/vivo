@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+import asyncio
+
+import websockets
 from crewai.flow.flow import Flow, listen, start, router, or_
 from pydantic import BaseModel
 
@@ -22,7 +25,7 @@ class AuraState(BaseModel):
 class AuraFlow(Flow[AuraState]):
 
     @start()
-    def handle_user_input(self):
+    def classified_user_intent(self):
         result = (
             Aura()
             .crew()
@@ -30,14 +33,14 @@ class AuraFlow(Flow[AuraState]):
         )
         self.state.topic = result.raw
 
-    @router(handle_user_input)
+    @router(classified_user_intent)
     def redirect_service(self):
         if self.state.topic.__contains__("information"):
             return "information"
         return self.state.topic
 
     @listen("information")
-    def process_plan(self):
+    def process_information(self):
         result = (
             Information()
             .crew()
@@ -45,8 +48,8 @@ class AuraFlow(Flow[AuraState]):
         )
         self.state.auraResponse = result.raw
 
-    @listen(or_(process_plan))
-    def save_dialog(self):
+    @listen(or_(process_information))
+    def optimization_mechanisms(self):
         result = (
             OptimizationMechanisms()
             .crew()
@@ -54,38 +57,29 @@ class AuraFlow(Flow[AuraState]):
                              "output": self.state.auraResponse})
         )
         self.state.auraResponse = result.raw
-        with open("dialog.txt", "w") as f:
-            f.write("userInput:" + self.state.userInput + "\n")
-            f.write("auraResponse:" + self.state.auraResponse + "\n")
 
 
-def chat_mode():
-    print(WELCOME_MESSAGE)
-    print(EXIT_PROMPT)
-    while True:
-        user_input = input("User input: ").strip()
-        if user_input.lower() in EXIT_MESSAGES:
-            print(GOODBYE_MESSAGE)
-            break
-        return user_input
+async def chat(websocket):
+    print("Connected Client!")
+    try:
+        async for message in websocket:
+            aura_flow = AuraFlow()
+            print(f"Received message: {message}")
+            await aura_flow.kickoff_async(inputs={
+                "userInput": message,
+                "auraResponse": "",
+                "topic": ""
+            })
+            await websocket.send(aura_flow.state.auraResponse)
+    except websockets.ConnectionClosed:
+        print("Close connection!")
 
 
-def plot():
-    aura_flow = AuraFlow()
-    aura_flow.plot()
+async def main():
+    async with websockets.serve(chat, "localhost", 8765):
+        print("WebSocket server running on ws://localhost:8765")
+        await asyncio.Future()
 
 
 if __name__ == "__main__":
-    aura_flow = AuraFlow()
-    print(WELCOME_MESSAGE)
-    print(EXIT_PROMPT)
-    while True:
-        user_input = input("User input: ").strip()
-        if user_input.lower() in EXIT_MESSAGES:
-            print(GOODBYE_MESSAGE)
-            break
-        aura_flow.kickoff(inputs={
-            "userInput": user_input,
-            "auraResponse": "",
-            "topic": ""
-        })
+    asyncio.run(main())

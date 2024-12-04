@@ -8,11 +8,6 @@ from pydantic import BaseModel
 
 from src.vivo.crews.aura.aura import Aura
 
-EXIT_MESSAGES = ['exit', 'quit']
-GOODBYE_MESSAGE = "Thank you so much for contacting us! 😊 It was a pleasure helping you. If you need anything else, just reach out. I'll always be here for anything you need. 💙 See you soon!"
-WELCOME_MESSAGE = "Hello! I am Aura, Vivo's virtual assistant, and I'm here to help you. 💙 Need support with your account, information about plans, or even help with technical issues? Just let me know, and together we'll find the best solution for you! 😊."
-EXIT_PROMPT = "Type 'exit' to leave.\n"
-
 
 class AuraState(BaseModel):
     userInput: str = "",

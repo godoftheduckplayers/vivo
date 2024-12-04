@@ -10,16 +10,16 @@ class Aura:
     tasks_config = 'config/tasks.yaml'
 
     @agent
-    def classification_agent(self) -> Agent:
+    def research_vivo_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['classification_agent'],
+            config=self.agents_config['research_vivo_agent'],
             verbose=True,
         )
 
     @task
-    def classification_task(self) -> Task:
+    def research_vivo_task(self) -> Task:
         return Task(
-            config=self.tasks_config['classification_task'],
+            config=self.tasks_config['research_vivo_task'],
         )
 
     @crew

@@ -1,6 +1,6 @@
-classification_task:
+research_vivo_task:
   description: >
-    Classify the customer's request into categories such as 'information', 'contracting', 'problems', or 'cancellation'.
+    This task aims to gather updated information about the services offered by Vivo in 2024, based on the user's input: {input}". The research will cover aspects such as mobile phone plans, fixed internet, TV packages, data offers, and other relevant services provided by the company.
   expected_output: >
-    ["information", "contracting", "problems", 'cancellation']
-  agent: classification_agent
+    A detailed and accurate summary of Vivo's current services in 2024, including information on plans, promotional offers, pricing, package features, and any other relevant services, tailored to the specific inquiry or question presented by the user.
+  agent: research_vivo_agent

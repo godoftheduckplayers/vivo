@@ -18,13 +18,13 @@ class AuraState(BaseModel):
 class AuraFlow(Flow[AuraState]):
 
     @start()
-    def classified_user_intent(self):
+    def init_conversation(self):
         result = (
             Aura()
             .crew()
-            .kickoff(inputs={"topic": self.state.userInput})
+            .kickoff(inputs={"input": self.state.userInput})
         )
-        self.state.topic = result.raw
+        self.state.auraResponse = result.raw
 
 
 async def chat(websocket):
@@ -32,7 +32,6 @@ async def chat(websocket):
     try:
         async for message in websocket:
             aura_flow = AuraFlow()
-            print(f"Received message: {message}")
             await aura_flow.kickoff_async(inputs={
                 "userInput": message,
                 "auraResponse": "",

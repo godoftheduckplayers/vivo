@@ -19,7 +19,7 @@ class Aura:
             "Classify it into one of the predefined categories: 'information' (for Vivo service-related queries) "
             "or 'cancellation' (for service termination requests)."
         ),
-        expected_output="['information', 'cancellation']",
+        expected_output="[information, cancellation]",
         agent=supervisor_vivo_agent
     )
 

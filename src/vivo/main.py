@@ -3,25 +3,40 @@
 import asyncio
 
 import websockets
-from crewai.flow.flow import Flow, start
+from crewai.flow.flow import Flow, start, listen
 from pydantic import BaseModel
 
 from src.vivo.crews.aura.aura import Aura
+from src.vivo.crews.cancellation.cancellation import Cancellation
+from src.vivo.crews.information.information import Information
+
+crews = {
+    "information": Information().crew,
+    "cancellation": Cancellation().crew,
+}
 
 
 class AuraState(BaseModel):
     userInput: str = "",
     auraResponse: str = "",
-    topic: str = ""
+    crew: str = ""
 
 
 class AuraFlow(Flow[AuraState]):
 
     @start()
-    def init_conversation(self):
+    def classification(self):
         result = (
             Aura()
-            .crew()
+            .crew
+            .kickoff(inputs={"input": self.state.userInput})
+        )
+        self.state.crew = result.raw
+
+    @listen(classification)
+    def process(self):
+        result = (
+            crews[self.state.crew]
             .kickoff(inputs={"input": self.state.userInput})
         )
         self.state.auraResponse = result.raw
@@ -32,10 +47,11 @@ async def chat(websocket):
     try:
         async for message in websocket:
             aura_flow = AuraFlow()
+            print(f"User message: {message}")
             await aura_flow.kickoff_async(inputs={
                 "userInput": message,
                 "auraResponse": "",
-                "topic": ""
+                "crew": ""
             })
             await websocket.send(aura_flow.state.auraResponse)
     except websockets.ConnectionClosed:

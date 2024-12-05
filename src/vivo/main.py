@@ -9,10 +9,21 @@ from pydantic import BaseModel
 from src.vivo.crews.aura.aura import Aura
 from src.vivo.crews.cancellation.cancellation import Cancellation
 from src.vivo.crews.information.information import Information
+from src.vivo.crews.tool.tool import Tool
 
 crews = {
-    "information": Information().crew,
-    "cancellation": Cancellation().crew,
+    "information": {
+        "crew": Information().crew,
+        "after_kickoff": [
+            Tool().crew
+        ]
+    },
+    "cancellation": {
+        "crew": Cancellation().crew,
+        "after_kickoff": [
+
+        ]
+    }
 }
 
 
@@ -36,10 +47,20 @@ class AuraFlow(Flow[AuraState]):
     @listen(classification)
     def process(self):
         result = (
-            crews[self.state.crew]
+            crews[self.state.crew]['crew']
             .kickoff(inputs={"input": self.state.userInput})
         )
         self.state.auraResponse = result.raw
+
+    @listen(process)
+    def after_kickoff(self):
+        crew = crews[self.state.crew]
+        for after in crew['after_kickoff']:
+            result = (
+                after
+                .kickoff(inputs={"input": self.state.auraResponse})
+            )
+            self.state.auraResponse = result.raw
 
 
 async def chat(websocket):

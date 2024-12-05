@@ -27,6 +27,18 @@ crews = {
 }
 
 
+config = {
+    "information": {
+        "agents": [
+
+        ],
+        "tasks:": [
+
+        ]
+    }
+}
+
+
 class AuraState(BaseModel):
     userInput: str = "",
     auraResponse: str = "",
@@ -75,6 +87,7 @@ async def chat(websocket):
                 "auraResponse": "",
                 "crew": ""
             })
+            aura_flow.plot("vivo")
             await websocket.send(aura_flow.state.auraResponse)
     except websockets.ConnectionClosed:
         print("Close connection!")

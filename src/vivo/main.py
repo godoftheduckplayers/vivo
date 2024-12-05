@@ -58,7 +58,8 @@ class AuraFlow(Flow[AuraState]):
         for after in crew['after_kickoff']:
             result = (
                 after
-                .kickoff(inputs={"input": self.state.auraResponse})
+                .kickoff(inputs={"input": self.state.auraResponse,
+                                 "user_input": self.state.userInput})
             )
             self.state.auraResponse = result.raw
 

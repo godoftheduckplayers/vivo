@@ -162,8 +162,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#FF5A50", "fixed": true, "font": {"color": "#FFFFFF", "multi": "html"}, "id": "classification", "label": "Classification", "margin": {"bottom": 8, "left": 10, "right": 10, "top": 10}, "physics": false, "shape": "box", "x": 0.0, "y": 0}, {"color": "#333333", "fixed": true, "font": {"color": "#FFFFFF", "multi": "html"}, "id": "process", "label": "Process", "margin": {"bottom": 8, "left": 10, "right": 10, "top": 10}, "physics": false, "shape": "box", "x": 0.0, "y": 150}, {"color": "#333333", "fixed": true, "font": {"color": "#FFFFFF", "multi": "html"}, "id": "after_kickoff", "label": "After Kickoff", "margin": {"bottom": 8, "left": 10, "right": 10, "top": 10}, "physics": false, "shape": "box", "x": 0.0, "y": 300}]);
-                  edges = new vis.DataSet([{"arrows": "to", "color": "#666666", "dashes": false, "from": "classification", "smooth": false, "to": "process", "width": 2}, {"arrows": "to", "color": "#666666", "dashes": false, "from": "process", "smooth": false, "to": "after_kickoff", "width": 2}]);
+                  nodes = new vis.DataSet([{"color": "#FF5A50", "fixed": true, "font": {"color": "#FFFFFF", "multi": "html"}, "id": "classification", "label": "Classification", "margin": {"bottom": 8, "left": 10, "right": 10, "top": 10}, "physics": false, "shape": "box", "x": 0.0, "y": 0}]);
+                  edges = new vis.DataSet([]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });

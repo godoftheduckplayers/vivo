@@ -6,13 +6,6 @@ import os
 import websockets
 from crewai import Crew, Agent, Task, Process
 from langtrace_python_sdk import langtrace
-from pydantic import BaseModel
-
-
-class AuraState(BaseModel):
-    userInput: str = "",
-    auraResponse: str = "",
-    crew: str = ""
 
 
 async def chat(websocket):

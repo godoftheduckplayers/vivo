@@ -2,10 +2,13 @@
 
 import asyncio
 import os
+from typing import List
 
 import websockets
 from crewai import Crew, Agent, Task, Process
 from langtrace_python_sdk import langtrace
+
+context: List[Task] = []
 
 
 async def chat(websocket):
@@ -45,14 +48,25 @@ async def chat(websocket):
                 allow_delegation=False,
             )
 
-            task = Task(
-                description="Assist the customer with topic {input} by providing a direct response containing the necessary information to resolve the issue or achieve the goal.",
-                expected_output="""
-                    - A concise and clear answer addressing the customer's question or request.
-                    - All necessary information or resources directly related to the topic.
-                    - Links or references to additional resources, if needed, without further explanation.
-                """,
-            )
+            if not context:
+                task = Task(
+                    description="Assist the customer with topic {input} by providing a direct response containing the necessary information to resolve the issue or achieve the goal.",
+                    expected_output="""
+                        - A concise and clear answer addressing the customer's question or request.
+                        - All necessary information or resources directly related to the topic.
+                        - Links or references to additional resources, if needed, without further explanation.
+                    """,
+                )
+            else:
+                task = Task(
+                    description="Assist the customer with topic {input} by providing a direct response containing the necessary information to resolve the issue or achieve the goal.",
+                    expected_output="""
+                        - A concise and clear answer addressing the customer's question or request.
+                        - All necessary information or resources directly related to the topic.
+                        - Links or references to additional resources, if needed, without further explanation.
+                    """,
+                    context=context
+                )
 
             crew = Crew(
                 agents=[cancellation_vivo_agent, research_vivo_agent],
@@ -78,6 +92,7 @@ async def chat(websocket):
                 crew
                 .kickoff(inputs={"input": message})
             )
+            context.append(task)
             print(f"ping: {result.token_usage}")
             await websocket.send(result.raw)
     except websockets.ConnectionClosed:

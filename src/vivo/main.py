@@ -27,7 +27,7 @@ async def chat(websocket):
                 goal="To guide users through the cancellation process of Vivo services by collecting essential details such as account information, service type, and reasons for cancellation. The agent will assist users in understanding any termination fees, promotional conditions, and any other required steps to complete the cancellation successfully.",
                 backstory="This agent was created to streamline the process of canceling Vivo services. With users often needing help to navigate account details and service terms, the agent ensures that no essential data is missed and helps facilitate a smooth and informed cancellation process. It is programmed to interact empathetically with users, addressing concerns and providing information about potential penalties or alternatives.",
                 llm="azure/gpt-4o",
-                allow_delegation=True
+                allow_delegation=False,
             )
 
             research_vivo_agent = Agent(
@@ -35,7 +35,7 @@ async def chat(websocket):
                 goal="Provide users with clear and concise information regarding Vivo's services, promotions, and offerings while ensuring accurate answers to specific queries.",
                 backstory="This agent is specifically designed to assist customers seeking information about Vivo. It accesses official Vivo sources, such as the corporate website and customer service channels, and critically evaluates recent publications. The agent’s objective is to deliver succinct and informative responses, enhancing customer understanding and satisfaction.",
                 llm="azure/gpt-4o",
-                allow_delegation=True
+                allow_delegation=False,
             )
 
             task = Task(
@@ -53,7 +53,18 @@ async def chat(websocket):
                 manager_agent=supervisor_agent,
                 cache=True,
                 verbose=True,
-                process=Process.hierarchical
+                process=Process.hierarchical,
+                memory=True,
+                embedder={
+                    "provider": "azure",
+                    "config": {
+                        "api_key": "eee842323c1e4556b1a7f0ddef120c5a",
+                        "model_name": "azure/text-embedding-3-small",
+                        "deployment": "text-embedding-3-small",
+                        "api_base": "https://supervisor-ai.openai.azure.com",
+                        "api_version": "2023-05-15"
+                    }
+                }
             )
 
             result = (

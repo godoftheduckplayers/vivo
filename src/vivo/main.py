@@ -8,6 +8,8 @@ import websockets
 from crewai import Crew, Agent, Task, Process
 from langtrace_python_sdk import langtrace
 
+from src.vivo.tools.custom_tool import send_email_tool
+
 context: List[Task] = []
 
 
@@ -68,8 +70,17 @@ async def chat(websocket):
                     context=context
                 )
 
+            complaints_vivo_agent = Agent(
+                role="Complaints Agent",
+                goal="""Assist users with their concerns and escalate when necessary.""",
+                backstory="""This agent handles customer concerns and ensures clarity in the process.""",
+                llm="azure/gpt-4o",
+                allow_delegation=True,
+                tools=[send_email_tool],
+            )
+
             crew = Crew(
-                agents=[cancellation_vivo_agent, research_vivo_agent],
+                agents=[cancellation_vivo_agent, research_vivo_agent, complaints_vivo_agent],
                 tasks=[task],
                 manager_agent=supervisor_agent,
                 cache=True,

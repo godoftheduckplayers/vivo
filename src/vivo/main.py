@@ -5,27 +5,9 @@ import os
 
 import websockets
 from crewai import Crew, Agent, Task, Process
-from crewai_tools.tools.pdf_search_tool.pdf_search_tool import PDFSearchTool
 from langtrace_python_sdk import langtrace
 
-manual_of_best_practices = PDFSearchTool(
-    pdf="C:\\Users\\Leandro Marques\\Downloads\\manual-de-boas-praticas.pdf",
-    config=dict(
-        llm=dict(
-            provider="azure_openai",
-            config=dict(
-                model="gpt-4o",
-            ),
-        ),
-        embedder=dict(
-            provider="azure_openai",
-            config=dict(
-                api_key="eee842323c1e4556b1a7f0ddef120c5a",
-                model="text-embedding-3-small",
-            ),
-        ),
-    )
-)
+from src.vivo.tools.pdf_rag_tool import PDFRagTool
 
 
 async def chat(websocket):
@@ -66,9 +48,8 @@ async def chat(websocket):
                     including the corporate website and customer service channels, to ensure accurate and relevant responses. 
                     The agent aims to improve user satisfaction by delivering concise and easy-to-understand information.
                 """,
-                llm="azure/gpt-4o",
                 allow_delegation=False,
-                tools=[manual_of_best_practices]
+                tools=PDFRagTool.tools
             )
 
             task = Task(
